@@ -1,7 +1,35 @@
 ---
+import Badge from '../components/Badge.astro';
+import Github from '../components/icons/Github.astro';
+import LinkedIn from '../components/icons/Linkedin.astro';
+import Socials from '../components/Socials.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout>
+<Layout title="Welcome to Astro">
+<main>
+	<section class="w-full mx-auto lg:w-[740px] py-36">
+		<img class="rounded-full w-24 h-24 " src="../../public/20241220_122959.jpg" alt="avatar"/>
+		<h1 
+		class="text-white text-5xl font-bold flex flex-row gap-x-6 py-10"
+		>
+			Hola, soy Carlos Puga <div class="flex justify-center items-center">
+				<Badge> Open to work </Badge>
+			</div>
+		</h1 >
+		<h2 class="text 2xl opacity-70 pb-5">
+			Soy ingeniero en conectividad y redes, Full Stack developer.  
+		</h2>
 
+			<nav class="flex gap-x-4">
+			<Socials>
+				<LinkedIn class="w-6 h-6"/> LinkedIn 
+			</Socials>
+			<Socials>
+				<Github class="w-6 h-6"/>Github 
+			</Socials>
+			</nav>
+
+</section>
+</main>
 </Layout>
