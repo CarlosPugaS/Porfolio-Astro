@@ -1,35 +1,52 @@
 ---
-import Badge from '../components/Badge.astro';
-import Github from '../components/icons/Github.astro';
-import LinkedIn from '../components/icons/Linkedin.astro';
-import Socials from '../components/Socials.astro';
-import Layout from '../layouts/Layout.astro';
+import Badge from "../components/Badge.astro";
+import Socials from "../components/Socials.astro";
+import TimeLine from "../components/TimeLine.astro";
+import Layout from "../layouts/Layout.astro";
+import SContainer from "../components/SContainer.astro";
+import ExpItem from "../components/ExpItem.astro";
+
+import ExperienceIcon from "../components/icons/ExperienceIcon.astro";
+import GithubIcon from "../components/icons/GithubIcon.astro";
+import LinkedInIcon from "../components/icons/LinkedinIcon.astro";
+import MailIcon from "../components/icons/MailIcon.astro";
 ---
 
-<Layout title="Welcome to Astro">
-<main>
-	<section class="w-full mx-auto lg:w-[740px] py-36">
-		<img class="rounded-full w-24 h-24 " src="../../public/20241220_122959.jpg" alt="avatar"/>
-		<h1 
-		class="text-white text-5xl font-bold flex flex-row gap-x-6 py-10"
-		>
-			Hola, soy Carlos Puga <div class="flex justify-center items-center">
-				<Badge> Open to work </Badge>
-			</div>
-		</h1 >
-		<h2 class="text 2xl opacity-70 pb-5">
-			Soy ingeniero en conectividad y redes, Full Stack developer.  
-		</h2>
-
-			<nav class="flex gap-x-4">
-			<Socials>
-				<LinkedIn class="w-6 h-6"/> LinkedIn 
-			</Socials>
-			<Socials>
-				<Github class="w-6 h-6"/>Github 
-			</Socials>
-			</nav>
-
-</section>
-</main>
+<Layout title="Porfolio Carlos Puga S. - Full Stack Developer  ">
+  <main>
+    <SContainer class="py-40 pb-30">
+      <img
+        class="rounded-full size-30"
+        src="/images/20241220_122959.jpg"
+        alt="avatar"
+      />
+      <h1 class="text-white text-[40px] font-bold flex flex-row gap-x-6 py-10">
+        Hola, Soy Carlos Puga Salinas
+        <div class="flex justify-center items-center">
+          <Badge> Open to work </Badge>
+        </div>
+      </h1>
+      <h2 class="text-[24px] opacity-70 pb-5">
+        Ingeniero en conectividad y redes / Full Stack developer.
+      </h2>
+      <nav class="flex gap-x-4">
+        <Socials>
+          <LinkedInIcon class="size-6" /> LinkedIn
+        </Socials>
+        <Socials>
+          <GithubIcon class="size-6" />Github
+        </Socials>
+        <Socials>
+          <MailIcon class="size-6" /> CarlosPuga.Sa@gmail.com
+        </Socials>
+      </nav>
+    </SContainer>
+  </main>
+  <SContainer>
+    <h2 class="flex flex-row text-2xl font-semibold mb-6 gap-x-4">
+      <ExperienceIcon class="size-20" />
+      Experiencia Laboral
+    </h2>
+    <TimeLine />
+  </SContainer>
 </Layout>

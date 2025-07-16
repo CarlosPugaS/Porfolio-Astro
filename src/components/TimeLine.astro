@@ -1,0 +1,28 @@
+---
+import ExpItem from "./ExpItem.astro";
+
+const EXPERIENCE = [
+  {
+    date: "Jun 2014 - A la fecha",
+    title: "Soporte informático SLEP - Valparaíso",
+    description:
+      "Técnico informático con más de 10 años de experiencia, encargado de gestionar la operatividad y mantenimiento de la red local y los equipos tecnológicos. Mis labores incluyen la coordinación del ciclo de vida del hardware, la ejecución de planes de mantenimiento y la colaboración en la implementación de mejoras. Además, presto asistencia directa a docentes y administrativos para asegurar el uso eficiente de las herramientas digitales.",
+  },
+  {
+    date: "Abr 2013 – Nov 2013",
+    title: "Help Desk - Valle nevado Ski Resort",
+    description:
+      "Brindé soporte técnico como parte del equipo Help Desk durante la temporada de invierno 2013, gestionando la resolución de incidencias técnicas y la configuración de dispositivos de red. Fui responsable del mantenimiento de terminales de punto de venta (POS), asegurando su continuidad operativa en un entorno de alta demanda.",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+  {
+    EXPERIENCE.map((experiencie) => (
+      <li class="mb-10 ms-4">
+        <ExpItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>

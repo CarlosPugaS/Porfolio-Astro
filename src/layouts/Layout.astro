@@ -1,40 +1,40 @@
 ---
-import './src/styles/global.css'
-import '@fontsource-variable/onest';
-import Header from '../components/Header.astro'
+import "./src/styles/global.css";
+import "@fontsource/sora";
+import Header from "../components/Header.astro";
 ---
 
 <!doctype html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title> Portfolio CarlosPugaS </title>
-	</head>
-	<body class="relative h-full w-full bg-slate-950">
-			<div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]">
-			<Header/>
-			<slot/>
-			</div>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Porfolio CarlosPugaS</title>
+  </head>
+  <body class="relative bg-slate-950">
+    <div
+      class="absolute top-0 bottom-0 left-0 right-0 -z-10 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]">
+    </div>
+
+    <Header class="flex items-center" />
+    <slot />
+  </body>
 </html>
 
 <style is:global>
-	:root {
-		color-scheme: light dark;
-	}
+  :root {
+    color-scheme: light dark;
+  }
 
-	html {
-		font-family: 'Onest Variable', sans-serif;
-	}
+  html {
+    font-family: "Sora", sans-serif;
+  }
 
-	body {
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-	}
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
 </style>
-
-
