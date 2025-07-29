@@ -4,7 +4,6 @@ import Socials from "../components/Socials.astro";
 import TimeLine from "../components/TimeLine.astro";
 import Layout from "../layouts/Layout.astro";
 import SContainer from "../components/SContainer.astro";
-import ExpItem from "../components/ExpItem.astro";
 
 import ExperienceIcon from "../components/icons/ExperienceIcon.astro";
 import GithubIcon from "../components/icons/GithubIcon.astro";
@@ -13,38 +12,49 @@ import MailIcon from "../components/icons/MailIcon.astro";
 ---
 
 <Layout title="Porfolio Carlos Puga S. - Full Stack Developer  ">
-  <main>
-    <SContainer class="py-40 pb-30">
-      <img
-        class="rounded-full size-30"
-        src="/images/20241220_122959.jpg"
-        alt="avatar"
-      />
-      <h1 class="text-white text-[40px] font-bold flex flex-row gap-x-6 py-10">
-        Hola, Soy Carlos Puga Salinas
-        <div class="flex justify-center items-center">
-          <Badge> Open to work </Badge>
+  <main id="Inicio">
+    <SContainer class="py-20 sm:py-32 sm:px-5">
+      <div class="flex flex-col items-center sm:items-start gap-6">
+        <div class="flex justify-center sm:block mb-6 sm:mb-0">
+          <img
+            class="rounded-full w-28 h-28 sm:w-32 sm:h-32"
+            src="/images/20241220_122959.jpg"
+            alt="avatar"
+          />
         </div>
-      </h1>
-      <h2 class="text-[24px] opacity-70 pb-5">
-        Ingeniero en conectividad y redes / Full Stack developer.
-      </h2>
-      <nav class="flex gap-x-4">
-        <Socials>
-          <LinkedInIcon class="size-6" /> LinkedIn
-        </Socials>
-        <Socials>
-          <GithubIcon class="size-6" />Github
-        </Socials>
-        <Socials>
-          <MailIcon class="size-6" /> CarlosPuga.Sa@gmail.com
-        </Socials>
-      </nav>
+        <div>
+          <h1
+            class="text-white text-2xl sm:text-4xl font-bold flex flex-col sm:flex-row sm:items-center sm:flex-wrap items-center gap-2 sm:gap-4 text-center sm:text-left">
+            <span>Hola, Soy Carlos Puga Salinas</span>
+            <Badge
+              class="transition-all duration-300 scale-100 hover:scale-110 hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-400/40 hover:bg-emerald-500/10"
+              >Open to work</Badge
+            >
+          </h1>
+          <h2
+            class="text-lg sm:text-xl opacity-70 pb-4 text-center sm:text-left">
+            Ingeniero en conectividad y redes / Full Stack developer.
+          </h2>
+          <nav class="flex flex-wrap gap-3 justify-center sm:justify-start">
+            <Socials href="https://www.linkedin.com">
+              <LinkedInIcon class="size-5" /> LinkedIn
+            </Socials>
+            <Socials href="https://github.com">
+              <GithubIcon class="size-5" /> Github
+            </Socials>
+            <Socials href="mailto:CarlosPuga.Sa@gmail.com">
+              <MailIcon class="size-5" /> CarlosPuga.Sa@gmail.com
+            </Socials>
+          </nav>
+        </div>
+      </div>
     </SContainer>
   </main>
-  <SContainer>
-    <h2 class="flex flex-row text-2xl font-semibold mb-6 gap-x-4">
-      <ExperienceIcon class="size-20" />
+
+  <SContainer id="experiencia" class="pb-20">
+    <h2
+      class="text-xl sm:text-2xl font-semibold mb-4 flex gap-x-3 items-center">
+      <ExperienceIcon class="size-6" />
       Experiencia Laboral
     </h2>
     <TimeLine />

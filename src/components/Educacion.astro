@@ -1,0 +1,34 @@
+---
+import ExpItem from "./ExpItem.astro";
+
+const EDUCATION = [
+  {
+    date: "Nov 2023 - Jul 2024",
+    title: "Full Stack Developer - 4Geeks Academy",
+    description:
+      "Bootcamp intensivo de desarrollo con +360. JavaScript, React, Python, Flask y SQL.",
+  },
+  {
+    date: "May 2015 - Oct 2015",
+    title: "Diplomado en Seguridad de la Información - DUOC UC",
+    description:
+      "Gestión de seguridad informática, protección de datos, Ciberseguridad",
+  },
+  {
+    date: "Mar 2010 - Jul 2014",
+    title: "Ingeniería en Conectividad y redes - DUOC UC",
+    description:
+      "Infraestructura de redes, hardware, soporte técnico y sistemas operativos",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">
+  {
+    EDUCATION.map((item) => (
+      <li class="mb-10 ms-4">
+        <ExpItem {...item} />
+      </li>
+    ))
+  }
+</ol>
