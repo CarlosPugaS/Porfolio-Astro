@@ -9,6 +9,9 @@ import ExperienceIcon from "../components/icons/ExperienceIcon.astro";
 import GithubIcon from "../components/icons/GithubIcon.astro";
 import LinkedInIcon from "../components/icons/LinkedinIcon.astro";
 import MailIcon from "../components/icons/MailIcon.astro";
+import EducationIcon from "../components/icons/EducationIcon.astro";
+import ProyectIcon from "../components/icons/ProyectIcon.astro";
+import Educacion from "../components/Educacion.astro";
 ---
 
 <Layout title="Porfolio Carlos Puga S. - Full Stack Developer  ">
@@ -19,13 +22,13 @@ import MailIcon from "../components/icons/MailIcon.astro";
           <img
             class="rounded-full w-28 h-28 sm:w-32 sm:h-32"
             src="/images/20241220_122959.jpg"
-            alt="avatar"
+            alt="Fotografía Carlos Puga"
           />
         </div>
         <div>
           <h1
             class="text-white text-2xl sm:text-4xl font-bold flex flex-col sm:flex-row sm:items-center sm:flex-wrap items-center gap-2 sm:gap-4 text-center sm:text-left">
-            <span>Hola, Soy Carlos Puga Salinas</span>
+            <span>Bienvenido! Soy Carlos Puga </span>
             <Badge
               class="transition-all duration-300 scale-100 hover:scale-110 hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-400/40 hover:bg-emerald-500/10"
               >Open to work</Badge
@@ -51,12 +54,33 @@ import MailIcon from "../components/icons/MailIcon.astro";
     </SContainer>
   </main>
 
-  <SContainer id="experiencia" class="pb-20">
+  <SContainer
+    id="experiencia"
+    class="bg-gradient-to-r from-slate-900/50 to-slate-800/30 rounded-2xl p-4 mt-10">
     <h2
       class="text-xl sm:text-2xl font-semibold mb-4 flex gap-x-3 items-center">
       <ExperienceIcon class="size-6" />
       Experiencia Laboral
     </h2>
     <TimeLine />
+  </SContainer>
+  <SContainer
+    id="educacion"
+    class="bg-gradient-to-r from-slate-900/50 to-slate-800/30 rounded-2xl p-4 mt-10">
+    <h2
+      class="text-xl sm:text-2xl font-semibold mb-4 flex gap-x-3 items-center">
+      <EducationIcon class="size-6" />
+      Educación
+    </h2>
+    <Educacion />
+  </SContainer>
+  <SContainer
+    id="proyectos"
+    class="bg-gradient-to-r from-slate-900/50 to-slate-800/30 rounded-2xl p-4 mt-10">
+    <h2
+      class="text-xl sm:text-2xl font-semibold mb-4 flex gap-x-3 items-center">
+      <ProyectIcon />
+      Proyectos
+    </h2>
   </SContainer>
 </Layout>
