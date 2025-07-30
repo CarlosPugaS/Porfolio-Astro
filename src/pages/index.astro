@@ -11,7 +11,9 @@ import LinkedInIcon from "../components/icons/LinkedinIcon.astro";
 import MailIcon from "../components/icons/MailIcon.astro";
 import EducationIcon from "../components/icons/EducationIcon.astro";
 import ProyectIcon from "../components/icons/ProyectIcon.astro";
+
 import Educacion from "../components/Educacion.astro";
+import Projects from "../components/Projects.astro";
 ---
 
 <Layout title="Porfolio Carlos Puga S. - Full Stack Developer  ">
@@ -82,5 +84,26 @@ import Educacion from "../components/Educacion.astro";
       <ProyectIcon />
       Proyectos
     </h2>
+    <Projects />
   </SContainer>
+  <div class="mt-16 text-center opacity-70">
+    <div class="flex justify-center mb-2">
+      <svg
+        class="size-12 text-emerald-400"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M13 16h-1v-4h-1m1-4h.01M12 12v.01m9 4V7a2 2 0 00-2-2H5a2 2 0 00-2 2v9a2 2 0 002 2h5l2 3 2-3h5a2 2 0 002-2z"
+        ></path>
+      </svg>
+    </div>
+    <p class="text-sm">
+      Este portfolio sigue en <span class="italic"> Construcción </span> 🛠️
+    </p>
+  </div>
 </Layout>
